@@ -1,0 +1,174 @@
+{
+    "marca_spider": {
+        "allowed_domains": ["marca.com"],
+        "start_all": "https://www.marca.com",
+        "start_latest": "https://www.marca.com/ultimas-noticias.html",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//li[contains(@class, 'tags')]//text()",
+
+        "is_premium_xpath": "//div[contains(@class,'article__premium') or contains(@class,'premium-amp')]",
+        "amp_redirect": {
+            "old_str": "www.",
+            "new_str": "amp."
+        }
+    },
+    "elmundo_spider": {
+        "allowed_domains": ["elmundo.es"],
+        "start_all": "https://www.elmundo.es",
+        "start_latest": "https://www.elmundo.es/ultimas-noticias.html",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//li[contains(@class, 'tags')]//text()",
+        
+        "is_premium_xpath": "//div[contains(@class,'article__premium') or contains(@class,'premium-amp')]",
+        "amp_redirect": {
+            "old_str": "www.",
+            "new_str": "amp."
+        }
+    },
+    "expansion_spider": {
+        "allowed_domains": ["expansion.com"],
+        "start_all": "https://www.expansion.com",
+        "start_latest": "https://www.expansion.com/ultima_hora/index.html",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//li[contains(@class, 'tags')]//text()",
+        
+        "is_premium_xpath": "//div[contains(@class,'article__premium') or contains(@class,'premium-amp')]",
+        "amp_redirect": {
+            "old_str": "www.",
+            "new_str": "amp."
+        }
+    },
+    "elpais_spider": {
+        "allowed_domains": ["elpais.com"],
+        "start_all": "https://elpais.com",
+        "start_latest": "https://elpais.com/ultimas-noticias/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//section[contains(@class,'w-ae')]//ul//text()",
+        
+        "is_premium_xpath": "//span[contains(@class,'a_t_i-s _pr')]"
+    },
+    "huffpost_spider": {
+        "allowed_domains": ["huffingtonpost.es"],
+        "start_all": "https://www.huffingtonpost.es",
+        "start_latest": "https://www.huffingtonpost.es/ultimas-noticias",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//*[contains(@class,'top-tags') or contains(@class, 'post-cat')]//text()",
+        
+        "is_premium_xpath": ""
+    },
+    "as_spider": {
+        "allowed_domains": ["as.com"],
+        "start_all": "https://as.com/",
+        "start_latest": "https://as.com/noticias/ultima-hora/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "(//nav[contains(@class, 'tags')]//li)[position()>1]//text()",
+        
+        "is_premium_xpath": ""
+    },
+    "elconfidencial_spider": {
+        "allowed_domains": ["elconfidencial.com"],
+        "start_all": "https://www.elconfidencial.com/",
+        "start_latest": "https://www.elconfidencial.com/ultima-hora-en-vivo/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//span[contains(@class,'Tags')]//text()",
+        
+        "is_premium_xpath": "//*[@class='premiumBar__exclusiveTag']"
+    },
+    "abc_es_spider": {
+        "allowed_domains": ["abc.es"],
+        "start_all": "https://www.abc.es/",
+        "start_latest": "https://www.abc.es/ultimas-noticias/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//div[contains(@class,'voc-d')]//li[contains(@class,'topics')][position()>1]//text()",
+        
+        "is_premium_xpath": "//div[contains(@class,'voc-paywall__notice')]",
+        "amp_redirect": {
+            "old_str": ".html",
+            "new_str": "_amp.html"
+        }
+    },
+    "relevo_spider": {
+        "allowed_domains": ["relevo.com"],
+        "start_all": "https://www.relevo.com/",
+        "start_latest": "https://www.relevo.com/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//span[contains(@class, 'prev-title')]//text()",
+        
+        "is_premium_xpath": ""
+    },
+    "elespanol_spider": {
+        "allowed_domains": ["elespanol.com"],
+        "start_all": "https://www.elespanol.com/",
+        "start_latest": "https://www.elespanol.com/ultimas/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//li[@class='tags__list-item']//text()",
+        
+        "is_premium_xpath": "(//div[@class='full-suscriptor-container'] | //*[contains(@class,'paywall__title') or contains(@class,'paywall-title')])"
+    },
+    "lavanguardia_spider": {
+        "allowed_domains": ["lavanguardia.com"],
+        "start_all": "https://www.lavanguardia.com/",
+        "start_latest": "https://www.lavanguardia.com/alminuto",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "(//h2[contains(@class,'supra-title')]//text())[1]",
+        
+        "is_premium_xpath": "//div[contains(@class, 'evl-paywall')]"
+    },
+    "okdiario_spider": {
+        "allowed_domains": ["okdiario.com"],
+        "start_all": "https://okdiario.com/",
+        "start_latest": "https://okdiario.com/ultimas-noticias/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "(//div[@class='topics'])[1]//li[position()>1]//text()",
+        
+        "is_premium_xpath": ""
+    },
+    "eldiario_spider": {
+        "allowed_domains": ["eldiario.es"],
+        "start_all": "https://www.eldiario.es/",
+        "start_latest": "https://www.eldiario.es/ultimas-noticias/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//ul[@class='tags-wrapper']//a/text()",
+        
+        "is_premium_xpath": ""
+    },
+    "libertaddigital_spider": {
+        "allowed_domains": ["libertaddigital.com"],
+        "start_all": "https://www.libertaddigital.com/",
+        "start_latest": "https://www.libertaddigital.com/ultimas-noticias.html",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//section[@class='tags']//li//text()",
+        
+        "is_premium_xpath": ""
+    },
+
+    "psoe_spider": {
+        "allowed_domains": ["psoe.es"],
+        "start_all": "https://www.psoe.es/actualidad/noticias-actualidad/",
+        "start_latest": "https://www.psoe.es/search/tags/app/",
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()",
+        "topics_xpath": "//ul[contains(@class, 'etiquetas')]//text()",
+        
+        "is_premium_xpath": "",
+
+        "custom_headers": {
+            "cookie": "language=es; incap_ses_1396_940706=k6YNfxz9Jyde5WhlfJdfEw/toGUAAAAA8cm7YoiA0roF/QhxYSr8JA==; visid_incap_940706=vP56RErBQZqepAPu130Pj+7on2UAAAAAQkIPAAAAAACAjZ2xAV98rK4nsiInA/3pv88q6Q0H5cJA; nlbi_940706=qaUJSciqDGZJF7inGDCS2QAAAAAYZD8aRyUdOQj/WGakb2Ha"
+        }
+
+    }
+}
