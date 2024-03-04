@@ -1,0 +1,8 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.csv
+*.json
+!spiders_conf.json
+dumps/
