@@ -4,5 +4,6 @@ __pycache__/
 *.pyc
 *.csv
 *.json
+*.txt
 !spiders_conf.json
 dumps/
