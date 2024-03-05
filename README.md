@@ -66,8 +66,10 @@ Source formats to scrape (required):
 - Without the `-g` flag: In this case, all URLs that do not correspond to the listed media outlets, i.e., those without a specialized spider, will be ignored. JSON files will be created for each of the media outlets where a URL was present, within the chosen folder specified by the `-f` parameter.
 - With the `-g` flag: It allows extracting any type of news and storing it within the specified folder in a file named `general.json`. In this case, the generic spider `general` will be used, so the information extraction will not be as precise as in the previous case. However, it enables obtaining information from a greater number of digital newspapers.
 
-## Development by
-
-[Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)
+# Development by
+Authored and maintained by the [Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)
 - Member of Consejo Superior de Investigaciones Científicas (CSIC)
 
+
+# Disclaimer
+NP SPIDERS, as any web crawling application, shall be used responsibly without infringing relevant copyright, privacy, or terms of service requirements. Checking each specific website's terms of service and complying with relevant national privacy and copyright laws is the responsibility of the people using NP SPIDER. Under no circumstances will the NP SPIDER development team be responsible for the use of the tool by any user or third party.
