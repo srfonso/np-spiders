@@ -65,3 +65,9 @@ Source formats to scrape (required):
 `nptool` is an additional tool that enables downloading and creating datasets from any media outlet based on a list of URLs. It has two main functions:
 - Without the `-g` flag: In this case, all URLs that do not correspond to the listed media outlets, i.e., those without a specialized spider, will be ignored. JSON files will be created for each of the media outlets where a URL was present, within the chosen folder specified by the `-f` parameter.
 - With the `-g` flag: It allows extracting any type of news and storing it within the specified folder in a file named `general.json`. In this case, the generic spider `general` will be used, so the information extraction will not be as precise as in the previous case. However, it enables obtaining information from a greater number of digital newspapers.
+
+## Development by
+
+[Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)
+- Member of Consejo Superior de Investigaciones Científicas (CSIC)
+

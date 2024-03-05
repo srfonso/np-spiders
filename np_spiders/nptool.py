@@ -15,6 +15,8 @@ from scrapy.crawler import CrawlerProcess
 
 logger = logging
 
+BASE_DUMP_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "dumps")
+
 def _configure_argparse():
     """Configuration of the parser."""
 
@@ -158,7 +160,7 @@ def run_spiders(urls_by_domain, folderpath, loglevel, use_general=False):
         # (Scrapy can't handle multiple writings in the same file)
         settings.update({
             'FEEDS': {
-                f'{(folderpath / domain.lower().replace(".","_")).as_posix()}.json': {
+                f'{(BASE_DUMP_PATH / folderpath / domain.lower().replace(".","_")).as_posix()}.json': {
                     'format': 'json',
                 },
             },
@@ -210,8 +212,6 @@ def main():
         except FileNotFoundError:
             logger.warning(f"File {args.urlsfile} not found.")
             return
-        print(len(urls))
-        print([(k,len(us)) for k,us in urls_by_domain.items()])
     else:
         urls_by_domain = group_by_domain([args.url]) if not args.generaliser else {"general": [args.url]}
 
