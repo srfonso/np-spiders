@@ -1,6 +1,6 @@
 # NP SPIDERS
 ## A generic newspaper scraper
-`np_spiders` is a scraping project that aims to extract news from a wide range of media sources. To achieve this, two main libraries are utilized:
+`np_spiders` is a scraping project that aims to extract news from a wide range of media sources even those premium news with a paywall. To achieve this, two main libraries are utilized:
 - `Scrapy`: A Python framework for scraping and crawling.
 - `Newspaper3k`: A Python library for extracting and curating articles.
 
@@ -65,6 +65,44 @@ Source formats to scrape (required):
 `nptool` is an additional tool that enables downloading and creating datasets from any media outlet based on a list of URLs. It has two main functions:
 - Without the `-g` flag: In this case, all URLs that do not correspond to the listed media outlets, i.e., those without a specialized spider, will be ignored. JSON files will be created for each of the media outlets where a URL was present, within the chosen folder specified by the `-f` parameter.
 - With the `-g` flag: It allows extracting any type of news and storing it within the specified folder in a file named `general.json`. In this case, the generic spider `general` will be used, so the information extraction will not be as precise as in the previous case. However, it enables obtaining information from a greater number of digital newspapers.
+
+## How to add new spiders
+First of all, it is necessary to add the media outlet in the `spiders_conf.json` file following the example model:
+
+```JSON
+    "<spider_name>": {
+        "allowed_domains": ["<website domain>"], # f.e: domain.com
+        "start_all": "<website landing page>", # f.e: https:/domain.com
+        "start_latest": "<website 'last news' page>", # f.e: https:/domain.com/last
+        
+        "info_xpath": "//script[@type='application/ld+json']/text()", # xpath for the ld+json data
+        "topics_xpath": "<xpath to extract topics>",  # Should end with /text()
+
+        "is_premium_xpath": "<xpath to detected a premium article>", # Optional
+
+        # Optional
+        "amp_redirect": { # Some websites have amp redirection which allow bypass paywalls
+            "old_str": "www.",
+            "new_str": "amp."
+        }
+    }
+```
+
+After this, you need to create a new file in the `np_spiders/spiders` folder named `<name>_spider.py` with the following structure:
+```Python
+from np_spiders.spiders.general import GeneralSpider
+
+class NameSpider(GeneralSpider):
+    name = "name_spider" # Same name used in spiders_conf.json 
+
+    #==== Regular expression path (without domain) ====
+
+    # A regular expression to detect an article in this website 
+    re_article_list = [r"/[\w\-/]*\d+\.html"] # Example -> articles ends with XXXX.html
+    
+    # A regular expresion to detect any other page in this website
+    re_else_list = [r'/(?!\S*\d+\.html)[\w\-/]+/'] # Example
+```
 
 # Development by
 Authored and maintained by the [Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)
