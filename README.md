@@ -86,7 +86,7 @@ First of all, it is necessary to add the media outlet in the `spiders_conf.json`
             "new_str": "amp."
         }
 
-        # Optional: In case is necessary customize the headers for this website
+        # Optional: In case you need to customise the headers for this website
         "custom_headers": {
             "cookie": "<custom cookie header>" # Example
         }
