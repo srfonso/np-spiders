@@ -85,6 +85,11 @@ First of all, it is necessary to add the media outlet in the `spiders_conf.json`
             "old_str": "www.",
             "new_str": "amp."
         }
+
+        # Optional: In case is necessary customize the headers for this website
+        "custom_headers": {
+            "cookie": "<custom cookie header>" # Example
+        }
     }
 ```
 
@@ -103,6 +108,20 @@ class NameSpider(GeneralSpider):
     # A regular expresion to detect any other page in this website
     re_else_list = [r'/(?!\S*\d+\.html)[\w\-/]+/'] # Example
 ```
+
+## Proxies available
+A [Webshare](webshare.io) account can be added in `settings.py` to allow IP rotation to reduce possible bans.
+
+```Python
+...
+# Webshare config
+WEBSHARE_ENABLED = False
+WEBSHARE_COUNTRY = "ES"
+WEBSHARE_USER = ""
+WEBSHARE_PASSWORD = ""
+...
+```
+
 
 # Development by
 Authored and maintained by the [Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)

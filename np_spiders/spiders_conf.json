@@ -154,21 +154,5 @@
         "topics_xpath": "//section[@class='tags']//li//text()",
         
         "is_premium_xpath": ""
-    },
-
-    "psoe_spider": {
-        "allowed_domains": ["psoe.es"],
-        "start_all": "https://www.psoe.es/actualidad/noticias-actualidad/",
-        "start_latest": "https://www.psoe.es/search/tags/app/",
-        
-        "info_xpath": "//script[@type='application/ld+json']/text()",
-        "topics_xpath": "//ul[contains(@class, 'etiquetas')]//text()",
-        
-        "is_premium_xpath": "",
-
-        "custom_headers": {
-            "cookie": "language=es; incap_ses_1396_940706=k6YNfxz9Jyde5WhlfJdfEw/toGUAAAAA8cm7YoiA0roF/QhxYSr8JA==; visid_incap_940706=vP56RErBQZqepAPu130Pj+7on2UAAAAAQkIPAAAAAACAjZ2xAV98rK4nsiInA/3pv88q6Q0H5cJA; nlbi_940706=qaUJSciqDGZJF7inGDCS2QAAAAAYZD8aRyUdOQj/WGakb2Ha"
-        }
-
     }
 }
