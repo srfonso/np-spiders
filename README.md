@@ -123,9 +123,8 @@ WEBSHARE_PASSWORD = ""
 ```
 
 
-# Development by
-Authored and maintained by the [Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es)
-- Member of Consejo Superior de Investigaciones Científicas (CSIC)
+# Developed by
+Authored and maintained by the [Cybersecurity and Privacy Protection Research Group (GiCP)](https://gicp.es), member of [Consejo Superior de Investigaciones Científicas (CSIC)](https://csic.es/)
 
 
 # Disclaimer
