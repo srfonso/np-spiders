@@ -18,7 +18,6 @@ All available spiders can be found by running the following command `scrapy list
 - elmundo_spider
 - elpais_spider
 - expansion_spider
-- general (*more details throughout the documentation)
 - huffpost_spider
 - kiosko_spider
 - lavanguardia_spider
@@ -27,6 +26,7 @@ All available spiders can be found by running the following command `scrapy list
 - okdiario_spider
 - psoe_spider
 - relevo_spider
+- general (*more details throughout the 'NPTOOL tutorial' section)
 
 To execute any of these spiders, simply use the following command:
 ```bash
@@ -71,9 +71,9 @@ First of all, it is necessary to add the media outlet in the `spiders_conf.json`
 
 ```JSON
     "<spider_name>": {
-        "allowed_domains": ["<website domain>"], # f.e: domain.com
-        "start_all": "<website landing page>", # f.e: https:/domain.com
-        "start_latest": "<website 'last news' page>", # f.e: https:/domain.com/last
+        "allowed_domains": ["<website domain>"], # e.g: domain.com
+        "start_all": "<website landing page>", # e.g: https:/domain.com
+        "start_latest": "<website 'last news' page>", # e.g: https:/domain.com/last
         
         "info_xpath": "//script[@type='application/ld+json']/text()", # xpath for the ld+json data
         "topics_xpath": "<xpath to extract topics>",  # Should end with /text()
