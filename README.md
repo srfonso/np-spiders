@@ -24,7 +24,6 @@ All available spiders can be found by running the following command `scrapy list
 - libertaddigital_spider
 - marca_spider
 - okdiario_spider
-- psoe_spider
 - relevo_spider
 - general (*more details throughout the 'NPTOOL tutorial' section)
 
