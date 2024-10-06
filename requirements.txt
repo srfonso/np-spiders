@@ -3,3 +3,4 @@ langdetect==1.0.9
 Scrapy==2.11.1
 tldextract==5.1.1
 pytz==2024.1
+lxml_html_clean==0.2.2
