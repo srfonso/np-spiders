@@ -126,7 +126,11 @@ def _extract_property(schema_data, property):
     for elem in prop_data:
         elem = elem.get("name", "")
         # In case the name is stored in a list of variations "name": [Pepe Perez, Jose Perez]
-        elem = elem[0] if isinstance(elem, list) else elem
+        if isinstance(elem, list):
+            if elem:
+                elem = elem[0]
+            else:
+                elem = ""
         result += _parse_content(elem)
 
     return result
