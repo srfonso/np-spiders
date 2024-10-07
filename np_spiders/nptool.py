@@ -196,7 +196,7 @@ def main():
 
     # Create destination folder
     folderpath = Path(args.foldername)
-    folderpath.mkdir(parents=True, exist_ok=True)
+    #folderpath.mkdir(parents=True, exist_ok=True)
 
     # Get the urls_by_domain
     urls_by_domain = []
